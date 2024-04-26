@@ -12,35 +12,6 @@ Employee Scheduler with Predictive Scheduling and Dynamic Availability This proj
     * Enables employees to update their availability in real-time. (Requires further development)
     * Schedules employees based on both skills and current availability.
 
-**Detailed File and Folder Structure:**
-
-employee_scheduler/
-├── apps/
-│   ├── employees/
-│   │   ├── admin.py  # Optional for admin interface configuration
-│   │   ├── apps.py  # App configuration file
-│   │   ├── migrations/  # Directory for database migrations
-│   │   ├── models.py  # Employee model definition
-│   │   ├── serializers.py  # Serializers for data conversion (API)
-│   │   ├── tests.py  # Unit tests for the app (optional)
-│   │   └── predictors/  # New folder for prediction logic
-│   │       ├── __init__.py  # Empty file to mark the directory as a package (optional)
-│   │       └── customer_traffic.py  # Code for customer traffic prediction
-│   └── shifts/
-│       ├── admin.py  # Optional for admin interface configuration
-│       ├── apps.py  # App configuration file
-│       ├── migrations/  # Directory for database migrations
-│       ├── models.py  # Shift model definition
-│       ├── schedulers/  # New folder for dynamic scheduling logic
-│       │   ├── __init__.py  # Empty file to mark the directory as a package (optional)
-│       │   └── dynamic_scheduler.py  # Code for dynamic scheduling
-│       ├── serializers.py  # Serializers for data conversion (API)
-│       └── tests.py  # Unit tests for the app (optional)
-├── manage.py  # Script to manage the Django project
-├── requirements.txt  # List of project dependencies
-├── __init__.py  # Empty file to mark the directory as a package
-├── settings.py  # Global project configuration
-└── urls.py  # Project URL routing configuration
 
 **Installation:**
 
