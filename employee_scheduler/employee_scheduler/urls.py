@@ -15,8 +15,25 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+
+from . import views  
+from apps.employees import views as employee_views
+from apps.shifts import views as shift_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('some_view/', views.some_view, name='some_view'),
+
+    # Employee API endpoints
+    path('employees/', employee_views.EmployeeList.as_view(), name='employee-list'),
+    path('employees/<int:pk>/', employee_views.EmployeeDetail.as_view(), name='employee-detail'),
+
+    # Shift API endpoints
+    path('shifts/', shift_views.ShiftList.as_view(), name='shift-list'),
+    path('shifts/<int:pk>/', shift_views.ShiftDetail.as_view(), name='shift-detail'),
+
+    # Additional API endpoints for prediction or scheduling (to be implemented)
+    path('predict/traffic/', YourPredictionView.as_view(), name='predict-traffic'),
+    path('schedule/dynamic/', YourSchedulingView.as_view(), name='schedule-dynamic'),
 ]
