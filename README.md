@@ -60,7 +60,9 @@ Employee Scheduler with Predictive Scheduling and Dynamic Availability This proj
 **Current Development Status:**
 
 * The core functionalities of employee and shift management are implemented.
-* The prediction and dynamic availability features are partially implemented and require further development.  
+* The prediction and dynamic availability features are partially implemented and require further development.
+
+* LinkedIn : https://www.linkedin.com/in/thekartikeyamishra/
 
 **Design Choices and Technical Challenges:**
 
